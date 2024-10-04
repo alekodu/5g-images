@@ -5,9 +5,10 @@ RUN apt-get update && apt install wget git make -y
 RUN wget https://go.dev/dl/go1.21.3.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
 ENV PATH=$PATH:/usr/local/go/bin
 
-RUN git clone https://github.com/HewlettPackard/PacketRusher.git
+RUN git clone https://github.com/alekodu/PacketRusher.git
 
 RUN cd PacketRusher \
+    && git checkout identifiers \
     && go mod download \
     && go build cmd/packetrusher.go
 
