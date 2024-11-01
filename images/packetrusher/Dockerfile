@@ -26,6 +26,8 @@ COPY entrypoint.sh .
 
 ENV GNB_NGAP_DEV=eth0 \
     GNB_GTPU_DEV=eth0 \
+    GNB_NGAP_PORT=9487 \
+    GNB_GTPU_port=2152 \
     AMF_HOSTNAME=amf \
     MCC=999 \
     MNC=70 \

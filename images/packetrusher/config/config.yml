@@ -1,10 +1,10 @@
 gnodeb:
   controlif:
     ip: "${GNB_NGAP_ADDR}"
-    port: 9487
+    port: "${GNB_NGAP_PORT}"
   dataif:
     ip: "${GNB_GTPU_ADDR}"
-    port: 2152
+    port: "${GNB_GTPU_PORT}"
   plmnlist:
     mcc: "${MCC}"
     mnc: "${MNC}"
